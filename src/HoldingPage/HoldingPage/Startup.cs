@@ -1,24 +1,9 @@
 using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace HoldingPage
 {
     public class Startup
-    {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
-        public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices()
-        {
-        }
-
-        
+    {        
         /* We can remove IWebHostEnvironment default parameter, as IHostBuilder use reflection and retrieves
          * the method based on its name only: Configure.
          * WelcomePage middleware is designed to quickly provide an example page when you just started developing.
